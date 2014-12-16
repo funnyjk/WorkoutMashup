@@ -1,0 +1,20 @@
+@mixin background-cover($img_location) {
+	background: url($img_location) no-repeat center center #222;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+}
+@mixin animation-var($d,$de,$c) {
+	-vendor-animation-duration: $d s;
+  	-vendor-animation-delay: $de s;
+  	-vendor-animation-iteration-count: $c;
+}
+@mixin evenness($id) {
+	@if $id % 2 == 0 {
+		background: #F7F7F7;
+	}
+	@else {
+		background: #F7F7F4;
+	}
+}

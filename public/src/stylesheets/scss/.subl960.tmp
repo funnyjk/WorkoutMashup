@@ -1,0 +1,72 @@
+// @import "../foundation";
+body { 
+  font: 100% $font-stack;
+  font-size: 15px;
+  background: $background !important;
+  color: $primary-color !important;
+}
+
+@while $head > 0 {
+  h#{$head} {
+    color: $primary-color !important;
+  }
+  $head: $head - 1;
+}
+
+section {
+  padding: $sec-padding 0;
+}
+/* Id */
+#cover {
+	min-height: $coverHeight;
+	@include background-cover("../img/l1.png");
+}
+
+#sidebar {
+  color: $alt-color;
+  background: $alt-background;
+}
+
+#foot {
+  padding-top: 10rem;
+  padding-bottom: 0;
+  font-size: $foot-size + 1rem;
+  h3 {
+    color: $alt-color !important;
+    font-size: $foot-size;
+  }
+  background: $alt-background;
+  color: $alt-color;
+}
+
+/* Dividers */
+#t1 {	@include background-cover("../img/t1.png");	}
+#t2 {	@include background-cover("../img/t2.png");	}
+#t3 {	@include background-cover("../img/t3.png");	}
+
+/* Colors */
+.brand-primary	{  color: $c_primary; &:hover { color: $c_info } }
+.brand-success	{ 	color: $c_success; &:hover { color: $c_info }	}
+.brand-info		{ 	color: $c_info; &:hover { color: $c_primary }  }
+.brand-warning 	{	color: $c_warning; &:hover { color: $c_danger } }
+.brand-danger	{	color: $c_danger; &:hover { color: $c_warning }  }
+
+@media only screen and (max-width: 767px) {
+  #sidebar {
+      position: fixed !important;
+      top:0;
+      left:0;
+      width: 100%
+  }
+}
+
+// sizes
+.fa-size {
+  font-size: $fa-size;
+}
+
+@for $i from 0 through $sections {
+  section:nth-child(#{$i}) {
+    @include evenness($i);
+  }
+}

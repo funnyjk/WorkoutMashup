@@ -1,0 +1,19 @@
+$('#social').waypoint(function(direction) {
+	if (direction === 'down') {
+		$('#socialRow').removeClass('fadeOutDown');
+		$('#socialRow').addClass('fadeInUp');
+	} else {
+		$('#socialRow').removeClass('fadeInUp');
+		$('#socialRow').addClass('fadeOutDown');
+	}
+}, { offset: '50%' });
+
+$('#sidebar').waypoint(function(direction) {
+	if (direction === 'down') {
+		$('#sidebar').addClass('sideFixed');
+		$('#sidebar').addClass('small-offset-8');
+	} else {
+		$('#sidebar').removeClass('sideFixed');
+		$('#sidebar').removeClass('small-offset-8');
+	}
+});

@@ -1,0 +1,8 @@
+<% include header.html %>
+<div class="wrapper">
+	<!-- cover -->
+	<% include  partials/misc/cover.html %>
+	<!-- main -->
+	<% include content.html %>
+</div>
+<% include footer.html %>

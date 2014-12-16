@@ -1,0 +1,27 @@
+angular.module('uiRout', [])
+	.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', function($stateProvider, $urlRouterProvider, $locationProvider) {
+
+		// $locationProvider.html5Mode(true);
+
+		$urlRouterProvider.otherwise('/');
+
+		$stateProvider
+
+			.state('main', {
+				views: {
+					'': {templateUrl: 'views/partials/misc/content.html'},
+					'side@main': { templateUrl: 'views/partials/misc/sidebar.html'},
+					'content@main': { templateUrl: 'views/content.html',}
+				}	
+			})
+			.state('main.home', {
+				url: '/',
+				templateUrl: 'views/partials/section/home.html',
+			})
+			.state('main.about', {
+				templateUrl: 'views/partials/section/about.html',
+			})
+			.state('main.contact', {
+				templateUrl: 'views/partials/section/contact.html',
+			});
+}]);

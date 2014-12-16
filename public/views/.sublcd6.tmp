@@ -1,0 +1,19 @@
+<% include header.html %>
+<div class="wrapper">
+	<!-- cover -->
+	<% include  partials/misc/cover.html %>
+	 <header class="panel" data-magellan-fixed-position="">A Panel</header>
+	<!-- main -->
+	<div class="row">
+		<% include content.html %>
+		<div class="small-3 columns">
+			<ul class="side-nav">
+				<li><a ui-sref="main.home">Home</a></li>
+				<li><a ui-sref="main.about">About</a></li>
+				<li><a ui-sref="main.contact">Contact</a></li>
+			</ul>
+		</div>
+	</div>
+	<% include partials/misc/foot.html %>
+</div>
+<% include footer.html %>

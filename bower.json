@@ -1,0 +1,30 @@
+{
+  "name": "WorkoutMashup",
+  "version": "0.2.0",
+  "description": "Private personal training",
+  "main": "public/dist/css/style.css",
+  "moduleType": [
+    "node"
+  ],
+  "keywords": [
+    "workout",
+    "mahsup"
+  ],
+  "authors": [
+    "Scott 'funnyjk'"
+  ],
+  "license": "MIT",
+  "homepage": "workoutmashup.com",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/dist/libs",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "foundation": "~5.1.0"
+  }
+}
